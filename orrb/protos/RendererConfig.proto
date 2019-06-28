@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package orrb;
+
+message Color {
+    float r = 1;
+    float g = 2;
+    float b = 3;
+    float a = 4;
+}
+
+message Quaternion {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float w = 4;
+}
+
+message Vector3 {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+}
+
+message Vector2 {
+    float x = 1;
+    float y = 2;
+}
+
+message RendererConfig {
+    string model_xml_path = 1;
+    string model_mapping_path = 2;
+    repeated RendererComponent components = 3;
+}
+
+message RendererComponent {
+   string type = 1;
+   string name = 2;
+   string path = 3;
+   RendererComponentConfig config = 4;
+}
+
+message RendererComponentConfig {
+    map<string, int32> int_properties = 1;
+    map<string, float> float_properties = 2;
+    map<string, string> string_properties = 3;
+    map<string, bool> bool_properties = 4;
+    map<string, Quaternion> quaternion_properties = 5;
+    map<string, Vector3> vector3_properties = 6;
+    map<string, Vector2> vector2_properties = 7;
+    map<string, string> enum_properties = 8;
+    map<string, Color> color_properties = 9;
+}

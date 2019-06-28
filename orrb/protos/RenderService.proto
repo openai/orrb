@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+import "orrb/protos/RendererConfig.proto";
+
+package orrb;
+
+service RenderService {
+    rpc RenderBatch(RenderBatchRequest) returns (RenderBatchResponse) {}
+    rpc Update(UpdateRequest) returns (UpdateResponse) {}
+}
+
+message RenderBatchRequest {
+    message BatchRequestEntry {
+        repeated float qpos = 1;
+        int32 seed = 2;
+    }
+    repeated BatchRequestEntry entries = 1;
+    int32 width = 2;
+    int32 height = 3;
+    int32 scene_id = 4;
+    repeated string camera_names = 5;
+    int32 batch_seed = 6;
+    bool use_entry_seeds = 7;
+    bool render_alpha = 8;
+    bool render_depth = 9;
+    bool render_normals = 10;
+    bool render_segmentation = 11;
+}
+
+message RenderBatchResponse {
+    message StreamEntry {
+        message BatchResponseEntry {
+            bytes image_data = 1;
+            bytes depth_data = 2;
+            bytes normals_data = 3;
+            bytes segmentation_data = 4;
+        }
+        string name = 1;
+        repeated BatchResponseEntry entries = 2;
+    }
+    message AuxiliaryBoolStreamEntry {
+        string name = 1;
+        repeated bool data = 2;
+    }
+    message AuxiliaryIntStreamEntry {
+        string name = 1;
+        repeated int32 data = 2;
+    }
+    message AuxiliaryFloatStreamEntry {
+        string name = 1;
+        repeated float data = 2;
+    }
+    repeated StreamEntry streams = 1;
+    repeated AuxiliaryBoolStreamEntry auxiliary_bool_streams = 2;
+    repeated AuxiliaryIntStreamEntry auxiliary_int_streams = 3;
+    repeated AuxiliaryFloatStreamEntry auxiliary_float_streams = 4;
+}
+
+message UpdateRequest {
+    repeated RendererComponent components = 1;
+}
+
+message UpdateResponse {
+    repeated string errors = 1;
+}

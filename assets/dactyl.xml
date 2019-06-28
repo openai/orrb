@@ -1,0 +1,400 @@
+<mujoco model="MuJoCo Model">
+    <compiler angle="radian" meshdir="stls" texturedir="textures" />
+    <option timestep="0.008" apirate="200" iterations="20" />
+    <size njmax="500" nconmax="100" nstack="600000" nuser_jnt="1" nuser_site="1" nuser_tendon="1" nuser_actuator="16" nuser_sensor="1" />
+    <visual>
+        <quality shadowsize="4096" />
+        <map force="0.1" fogend="5" />
+    </visual>
+    <default class="main">
+        <default class="robot0:asset_class">
+            <joint limited="true" margin="0.01" armature="0.001" damping="0.05" frictionloss="0.001" />
+            <geom friction="0.4 0.005 0.001" margin="0.0005" material="randomize26" />
+            <site size="0.005 0 0" rgba="0.4 0.9 0.4 1" />
+            <general ctrllimited="true" forcelimited="true" />
+        </default>
+        <default class="robot0:D_Touch">
+            <site size="0.007 0.004 0" type="capsule" rgba="0 0.5 0 0.2" />
+        </default>
+        <default class="robot0:D_TouchVisual">
+            <site size="0.007 0.004 0" type="capsule" rgba="0 0 0 0" />
+        </default>
+        <default class="robot0:D_Contact">
+            <geom type="mesh" group="1" friction="0.2 0.005 0.001" material="randomize27" />
+        </default>
+        <default class="robot0:D_Contact_Finger">
+            <geom type="mesh" group="2" friction="0.8 0.025 0.005" material="randomize28" />
+        </default>
+        <default class="robot0:D_Visual">
+            <geom type="mesh" contype="0" group="1" material="randomize29" />
+        </default>
+        <default class="robot0:D_PhasespaceSite">
+            <site size="0.002 0 0" material="robot0:MatPhasespace" />
+        </default>
+        <default class="robot0:free">
+            <joint type="free" />
+        </default>
+        <default class="robot0:D_Occlusion">
+            <geom size="0.003 0.006 0.004" type="box" material="randomize30" rgba="0 0 0 0" />
+        </default>
+    </default>
+    <asset>
+        <texture type="2d" name="robot0:texplane" builtin="checker" rgb1="0.2 0.3 0.4" rgb2="0.1 0.15 0.2" width="512" height="512" />
+        <texture type="cube" name="robot0:texgeom" builtin="flat" mark="cross" rgb1="0.3 0.6 0.5" rgb2="0.3 0.6 0.5" width="127" height="762" />
+        <texture type="cube" name="randomize0" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize1" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize2" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize3" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize4" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize5" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize6" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize7" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize8" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize9" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize10" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize11" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize12" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize13" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize14" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize15" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize16" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize17" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize18" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize19" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize20" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize21" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize22" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize23" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize24" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize25" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize26" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize27" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize28" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize29" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <texture type="cube" name="randomize30" file="small_placeholder_cube.png" gridsize="6 1" gridlayout="UDLRFB......" />
+        <material name="robot0:MatGnd" texture="robot0:texplane" texuniform="true" reflectance="0.5" />
+        <material name="robot0:MatColl" specular="1" shininess="0.3" reflectance="0.5" rgba="0.4 0.5 0.6 1" />
+        <material name="robot0:MatVisual" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 1" />
+        <material name="robot0:MatPhasespace" emission="4" rgba="1 0.5 0.5 1" />
+        <material name="robot0:MatContact" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 1" />
+        <material name="robot0:object" texture="robot0:texgeom" />
+        <material name="cube:top_background" specular="1" shininess="0.3" rgba="0.09 0.12 0.45 1" />
+        <material name="cube:bottom_background" specular="1" shininess="0.3" rgba="0.13 0.1 0.27 1" />
+        <material name="cube:front_background" specular="1" shininess="0.3" rgba="0.7 0.62 0.09 1" />
+        <material name="cube:back_background" specular="1" shininess="0.3" rgba="0.33 0.04 0.02 1" />
+        <material name="cube:right_background" specular="1" shininess="0.3" rgba="0.29 0.54 0 1" />
+        <material name="cube:left_background" specular="1" shininess="0.3" rgba="0.62 0.33 0 1" />
+        <material name="cube:letter" specular="1" shininess="0.3" />
+        <material name="randomize0" texture="randomize0" />
+        <material name="randomize1" texture="randomize1" />
+        <material name="randomize2" texture="randomize2" />
+        <material name="randomize3" texture="randomize3" />
+        <material name="randomize4" texture="randomize4" />
+        <material name="randomize5" texture="randomize5" />
+        <material name="randomize6" texture="randomize6" />
+        <material name="randomize7" texture="randomize7" />
+        <material name="randomize8" texture="randomize8" />
+        <material name="randomize9" texture="randomize9" />
+        <material name="randomize10" texture="randomize10" />
+        <material name="randomize11" texture="randomize11" />
+        <material name="randomize12" texture="randomize12" />
+        <material name="randomize13" texture="randomize13" />
+        <material name="randomize14" texture="randomize14" />
+        <material name="randomize15" texture="randomize15" />
+        <material name="randomize16" texture="randomize16" />
+        <material name="randomize17" texture="randomize17" />
+        <material name="randomize18" texture="randomize18" />
+        <material name="randomize19" texture="randomize19" />
+        <material name="randomize20" texture="randomize20" />
+        <material name="randomize21" texture="randomize21" />
+        <material name="randomize22" texture="randomize22" />
+        <material name="randomize23" texture="randomize23" />
+        <material name="randomize24" texture="randomize24" />
+        <material name="randomize25" texture="randomize25" />
+        <material name="randomize26" texture="randomize26" />
+        <material name="randomize27" texture="randomize27" />
+        <material name="randomize28" texture="randomize28" />
+        <material name="randomize29" texture="randomize29" />
+        <material name="randomize30" texture="randomize30" rgba="1 1 1 0" />
+        <mesh name="robot0:forearm" file="shadowhand/forearm_electric.stl" />
+        <mesh name="robot0:wrist" file="shadowhand/wrist.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:palm" file="shadowhand/palm.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:lfmetacarpal" file="shadowhand/lfmetacarpal.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:knuckle" file="shadowhand/knuckle.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:F3" file="shadowhand/F3.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:F2" file="shadowhand/F2.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:F1" file="shadowhand/F1.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:TH3_z" file="shadowhand/TH3_z.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:TH2_z" file="shadowhand/TH2_z.stl" scale="0.001 0.001 0.001" />
+        <mesh name="robot0:TH1_z" file="shadowhand/TH1_z.stl" scale="0.001 0.001 0.001" />
+        <mesh name="cube:A" file="openai_cube/A.stl" />
+        <mesh name="cube:I" file="openai_cube/I.stl" />
+        <mesh name="cube:O" file="openai_cube/O.stl" />
+        <mesh name="cube:N" file="openai_cube/N.stl" />
+        <mesh name="cube:E" file="openai_cube/E.stl" />
+        <mesh name="cube:P" file="openai_cube/P.stl" />
+    </asset>
+    <worldbody>
+        <geom name="floor0" size="1 1 1e-06" pos="1 1 0" type="box" material="randomize0" />
+        <camera name="vision_cam_left" pos="1.75368 1.28696 0.901017" quat="-0.569423 -0.165741 -0.375009 -0.7125" fovy="15" />
+        <camera name="vision_cam_right" pos="0.281267 1.30725 0.827613" quat="-0.54325 -0.167474 0.400291 0.718748" fovy="16" />
+        <camera name="vision_cam_top" pos="1.01696 0.892165 0.880369" quat="0.024637 0.018284 0.021682 0.999294" fovy="28" />
+        <body name="robot0:hand mount" pos="1 1.25 0.15" quat="9.38184e-07 9.38187e-07 -0.707108 0.707105">
+            <inertial pos="0 0 0" mass="0.1" diaginertia="0.001 0.001 0.001" />
+            <body name="robot0:forearm" childclass="robot0:asset_class" pos="0 0.01 0">
+                <inertial pos="0.001 -0.002 0.29" quat="0.982037 -0.0160006 0 -0.188007" mass="4" diaginertia="0.01 0.01 0.0075" />
+                <geom name="robot0:forearm" class="robot0:D_Contact" pos="0 0.01 0.04" quat="0.707388 0 0 0.706825" material="randomize1" mesh="robot0:forearm" />
+                <body pos="0.046 -0.035 0.216" quat="9.38184e-07 9.38187e-07 -0.707108 0.707105">
+                    <inertial pos="0.046 -0.035 0.216" quat="9.38184e-07 9.38187e-07 -0.707108 0.707105" mass="0" diaginertia="0 0 0" />
+                    <site name="robot0:phasespace_ref0" class="robot0:D_PhasespaceSite" pos="0.007 -0.009 -0.006" />
+                    <site name="robot0:phasespace_ref1" class="robot0:D_PhasespaceSite" pos="0.085 -0.009 -0.006" />
+                    <site name="robot0:phasespace_ref2" class="robot0:D_PhasespaceSite" pos="0.085 -0.009 -0.084" />
+                </body>
+                <body name="robot0:wrist" pos="0 0 0.256">
+                    <inertial pos="0.003 0 0.016" quat="0.504234 0.49623 0.49523 0.504234" mass="0.3" diaginertia="0.001 0.001 0.001" />
+                    <joint name="robot0:WRJ1" pos="0 0 0" axis="0 1 0" range="-0.489 0.14" armature="0.005" damping="0.43" user="1123" />
+                    <geom name="robot0:wrist" class="robot0:D_Visual" material="randomize2" mesh="robot0:wrist" />
+                    <body name="robot0:palm" pos="0 0 0.034">
+                        <inertial pos="0.006 0 0.036" quat="0.715833 0.0439898 0.0749825 0.692839" mass="0.3" diaginertia="0.001 0.001 0.001" />
+                        <joint name="robot0:WRJ0" pos="0 0 0" axis="1 0 0" range="-0.698 0.489" armature="0.005" damping="2" frictionloss="0.05" user="1122" />
+                        <geom name="robot0:palm" class="robot0:D_Visual" material="randomize3" mesh="robot0:palm" />
+                        <body name="robot0:ffknuckle" pos="0.033 0 0.095">
+                            <inertial pos="0 0 0" quat="0.520062 0.854102 0.00600072 -0.00300036" mass="0.008" diaginertia="1e-05 1e-05 1e-05" />
+                            <joint name="robot0:FFJ3" pos="0 0 0" axis="0 1 0" range="-0.277 0.349" damping="0.15" frictionloss="0.01" user="1103" />
+                            <geom name="robot0:ffknuckle" class="robot0:D_Visual" material="randomize4" mesh="robot0:knuckle" />
+                            <body name="robot0:ffproximal" pos="0 0 0">
+                                <inertial pos="0 0 0.023" quat="0.707095 -0.00400054 0.00400054 0.707095" mass="0.014" diaginertia="1e-05 1e-05 1e-05" />
+                                <joint name="robot0:FFJ2" pos="0 0 0" axis="1 0 0" stiffness="0.03" range="0 1.454" damping="0.2" frictionloss="0.01" user="1102" />
+                                <geom name="robot0:ffproximal" class="robot0:D_Visual" material="randomize5" mesh="robot0:F3" />
+                                <body name="robot0:ffmiddle" pos="0 0 0.045">
+                                    <inertial pos="0 0 0.011" quat="0.707107 0 0 0.707107" mass="0.012" diaginertia="1e-05 1e-05 1e-05" />
+                                    <joint name="robot0:FFJ1" pos="0 0 0" axis="1 0 0" range="0 1.684" damping="0.1" user="1101" />
+                                    <geom name="robot0:ffmiddle" class="robot0:D_Visual" material="randomize6" mesh="robot0:F2" />
+                                    <body name="robot0:ffdistal" pos="0 0 0.025">
+                                        <inertial pos="0 0 0.015" quat="0.7071 -0.00300043 0.00300043 0.7071" mass="0.01" diaginertia="1e-05 1e-05 1e-05" />
+                                        <joint name="robot0:FFJ0" pos="0 0 0" axis="1 0 0" springref="-1" stiffness="0.01" range="0 1.571" user="1100" />
+                                        <geom name="robot0:ffdistal" class="robot0:D_Visual" pos="0 0 0.001" material="randomize7" mesh="robot0:F1" />
+                                        <site name="robot0:S_fftip" class="robot0:D_PhasespaceSite" pos="0 0.004 0.027" />
+                                        <site name="robot0:Tch_fftip" class="robot0:D_TouchVisual" pos="0 -0.002 0.02" />
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                        <body name="robot0:mfknuckle" pos="0.011 0 0.099">
+                            <inertial pos="0 0 0" quat="0.520062 0.854102 0.00600072 -0.00300036" mass="0.008" diaginertia="1e-05 1e-05 1e-05" />
+                            <joint name="robot0:MFJ3" pos="0 0 0" axis="0 1 0" range="-0.293 0.349" damping="0.15" frictionloss="0.002" user="1107" />
+                            <geom name="robot0:mfknuckle" class="robot0:D_Visual" material="randomize8" mesh="robot0:knuckle" />
+                            <body name="robot0:mfproximal" pos="0 0 0">
+                                <inertial pos="0 0 0.023" quat="0.707095 -0.00400054 0.00400054 0.707095" mass="0.014" diaginertia="1e-05 1e-05 1e-05" />
+                                <joint name="robot0:MFJ2" pos="0 0 0" axis="1 0 0" stiffness="0.03" range="0 1.435" damping="0.28" user="1106" />
+                                <geom name="robot0:mfproximal" class="robot0:D_Visual" material="randomize9" mesh="robot0:F3" />
+                                <body name="robot0:mfmiddle" pos="0 0 0.045">
+                                    <inertial pos="0 0 0.012" quat="0.707107 0 0 0.707107" mass="0.012" diaginertia="1e-05 1e-05 1e-05" />
+                                    <joint name="robot0:MFJ1" pos="0 0 0" axis="1 0 0" range="0 1.772" damping="0.035" user="1105" />
+                                    <geom name="robot0:mfmiddle" class="robot0:D_Visual" material="randomize10" mesh="robot0:F2" />
+                                    <body name="robot0:mfdistal" pos="0 0 0.025">
+                                        <inertial pos="0 0 0.015" quat="0.7071 -0.00300043 0.00300043 0.7071" mass="0.01" diaginertia="1e-05 1e-05 1e-05" />
+                                        <joint name="robot0:MFJ0" pos="0 0 0" axis="1 0 0" springref="-1" stiffness="0.01" range="0 1.571" user="1104" />
+                                        <geom name="robot0:mfdistal" class="robot0:D_Visual" material="randomize11" mesh="robot0:F1" />
+                                        <site name="robot0:S_mftip" class="robot0:D_PhasespaceSite" pos="0 0.004 0.027" />
+                                        <site name="robot0:Tch_mftip" class="robot0:D_TouchVisual" pos="0 -0.002 0.02" />
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                        <body name="robot0:rfknuckle" pos="-0.011 0 0.095">
+                            <inertial pos="0 0 0" quat="0.520062 0.854102 0.00600072 -0.00300036" mass="0.008" diaginertia="1e-05 1e-05 1e-05" />
+                            <joint name="robot0:RFJ3" pos="0 0 0" axis="0 1 0" range="-0.349 0.349" damping="0.19" frictionloss="0.01" user="1111" />
+                            <geom name="robot0:rfknuckle" class="robot0:D_Visual" material="randomize12" mesh="robot0:knuckle" />
+                            <body name="robot0:rfproximal" pos="0 0 0">
+                                <inertial pos="0 0 0.023" quat="0.707095 -0.00400054 0.00400054 0.707095" mass="0.014" diaginertia="1e-05 1e-05 1e-05" />
+                                <joint name="robot0:RFJ2" pos="0 0 0" axis="1 0 0" range="0 1.571" damping="0.22" frictionloss="0.01" user="1110" />
+                                <geom name="robot0:rfproximal" class="robot0:D_Visual" material="randomize13" mesh="robot0:F3" />
+                                <body name="robot0:rfmiddle" pos="0 0 0.045">
+                                    <inertial pos="0 0 0.012" quat="0.707107 0 0 0.707107" mass="0.012" diaginertia="1e-05 1e-05 1e-05" />
+                                    <joint name="robot0:RFJ1" pos="0 0 0" axis="1 0 0" range="0 1.571" user="1109" />
+                                    <geom name="robot0:rfmiddle" class="robot0:D_Visual" material="randomize14" mesh="robot0:F2" />
+                                    <body name="robot0:rfdistal" pos="0 0 0.025">
+                                        <inertial pos="0 0 0.015" quat="0.7071 -0.00300043 0.00300043 0.7071" mass="0.01" diaginertia="1e-05 1e-05 1e-05" />
+                                        <joint name="robot0:RFJ0" pos="0 0 0" axis="1 0 0" springref="-1" stiffness="0.01" range="0 1.558" user="1108" />
+                                        <geom name="robot0:rfdistal" class="robot0:D_Visual" pos="0 0 0.001" material="randomize15" mesh="robot0:F1" />
+                                        <site name="robot0:S_rftip" class="robot0:D_PhasespaceSite" pos="0 0.004 0.027" />
+                                        <site name="robot0:Tch_rftip" class="robot0:D_TouchVisual" pos="0 -0.002 0.02" />
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                        <body name="robot0:lfmetacarpal" pos="-0.017 0 0.044">
+                            <inertial pos="-0.014 0.001 0.014" quat="0.709167 -0.0920216 -0.0630148 0.696164" mass="0.075" diaginertia="1e-05 1e-05 1e-05" />
+                            <joint name="robot0:LFJ4" pos="0 0 0" axis="0.570977 0 0.820966" range="0 0.785" damping="0.22" frictionloss="0.01" user="1116" />
+                            <geom name="robot0:lfmetacarpal" class="robot0:D_Visual" pos="-0.016 0 -0.023" material="randomize16" mesh="robot0:lfmetacarpal" />
+                            <body name="robot0:lfknuckle" pos="-0.017 0 0.044">
+                                <inertial pos="0 0 0" quat="0.520062 0.854102 0.00600072 -0.00300036" mass="0.008" diaginertia="1e-05 1e-05 1e-05" />
+                                <joint name="robot0:LFJ3" pos="0 0 0" axis="0 1 0" range="-0.332 0.247" damping="0.4" frictionloss="0.01" user="1115" />
+                                <geom name="robot0:lfknuckle" class="robot0:D_Visual" material="randomize17" mesh="robot0:knuckle" />
+                                <body name="robot0:lfproximal" pos="0 0 0">
+                                    <inertial pos="0 0 0.023" quat="0.707095 -0.00400054 0.00400054 0.707095" mass="0.014" diaginertia="1e-05 1e-05 1e-05" />
+                                    <joint name="robot0:LFJ2" pos="0 0 0" axis="1 0 0" range="0 1.571" damping="0.33" frictionloss="0.01" user="1114" />
+                                    <geom name="robot0:lfproximal" class="robot0:D_Visual" material="randomize18" mesh="robot0:F3" />
+                                    <body name="robot0:lfmiddle" pos="0 0 0.045">
+                                        <inertial pos="0 0 0.012" quat="0.707107 0 0 0.707107" mass="0.012" diaginertia="1e-05 1e-05 1e-05" />
+                                        <joint name="robot0:LFJ1" pos="0 0 0" axis="1 0 0" range="0 1.755" damping="0.03" user="1113" />
+                                        <geom name="robot0:lfmiddle" class="robot0:D_Visual" material="randomize19" mesh="robot0:F2" />
+                                        <body name="robot0:lfdistal" pos="0 0 0.025">
+                                            <inertial pos="0 0 0.015" quat="0.7071 -0.00300043 0.00300043 0.7071" mass="0.01" diaginertia="1e-05 1e-05 1e-05" />
+                                            <joint name="robot0:LFJ0" pos="0 0 0" axis="1 0 0" springref="-1" stiffness="0.01" range="0 1.571" user="1112" />
+                                            <geom name="robot0:lfdistal" class="robot0:D_Visual" pos="0 0 0.001" material="randomize20" mesh="robot0:F1" />
+                                            <site name="robot0:S_lftip" class="robot0:D_PhasespaceSite" pos="0 0.004 0.027" />
+                                            <site name="robot0:Tch_lftip" class="robot0:D_TouchVisual" pos="0 -0.002 0.02" />
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                        <body name="robot0:thbase" pos="0.034 -0.009 0.029" quat="0.923956 0 0.382499 0">
+                            <inertial pos="0 0 0" mass="0.01" diaginertia="1e-05 1e-05 1e-05" />
+                            <joint name="robot0:THJ4" pos="0 0 0" axis="0 0 -1" range="-1 0.5" damping="0.2" frictionloss="0.02" user="1121" />
+                            <geom name="robot0:thbase" class="robot0:D_Visual" size="0.001 0.001 0.001" type="box" material="randomize21" />
+                            <body name="robot0:thproximal" pos="0 0 0">
+                                <inertial pos="0 0 0.017" quat="0.981604 0 0.000999597 0.190923" mass="0.016" diaginertia="1e-05 1e-05 1e-05" />
+                                <joint name="robot0:THJ3" pos="0 0 0" axis="1 0 0" range="0 1.222" damping="0.2" frictionloss="0.003" user="1120" />
+                                <geom name="robot0:thproximal" class="robot0:D_Visual" material="randomize22" mesh="robot0:TH3_z" />
+                                <body name="robot0:thhub" pos="0 0 0.038">
+                                    <inertial pos="0 0 0" mass="0.002" diaginertia="1e-05 1e-05 1e-05" />
+                                    <joint name="robot0:THJ2" pos="0 0 0" axis="1 0 0" range="-0.209 0.155" damping="0.1" frictionloss="0.009" user="1119" />
+                                    <body name="robot0:thmiddle" pos="0 0 0">
+                                        <inertial pos="0 0 0.016" quat="0.999971 -0.000999971 -0.00699979 0.00299991" mass="0.016" diaginertia="1e-05 1e-05 1e-05" />
+                                        <joint name="robot0:THJ1" pos="0 0 0" axis="0 1 0" range="-0.583 0.524" damping="0.2" frictionloss="0.01" user="1118" />
+                                        <geom name="robot0:thmiddle" class="robot0:D_Visual" material="randomize23" mesh="robot0:TH2_z" />
+                                        <body name="robot0:thdistal" pos="0 0 0.032">
+                                            <inertial pos="0 0 0.016" quat="0.99887 -0.00499935 -0.0469939 0.00499935" mass="0.016" diaginertia="1e-05 1e-05 1e-05" />
+                                            <joint name="robot0:THJ0" pos="0 0 0" axis="0 1 0" range="-1.571 0" damping="0.18" frictionloss="0.01" user="1117" />
+                                            <geom name="robot0:thdistal" class="robot0:D_Visual" material="randomize24" mesh="robot0:TH1_z" />
+                                            <site name="robot0:S_thtip" class="robot0:D_PhasespaceSite" pos="0.007 0 0.028" />
+                                            <site name="robot0:Tch_thtip" class="robot0:D_TouchVisual" pos="0 -0.002 0.02" />
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="cube:middle" pos="1 0.87 0.2">
+            <inertial pos="0 0 0" mass="0.0779663" diaginertia="4.22187e-05 4.22187e-05 4.22187e-05" />
+            <joint name="cube:cube_tx" pos="0 0 0" axis="1 0 0" type="slide" />
+            <joint name="cube:cube_ty" pos="0 0 0" axis="0 1 0" type="slide" />
+            <joint name="cube:cube_tz" pos="0 0 0" axis="0 0 1" type="slide" />
+            <joint name="cube:cube_rot" pos="0 0 0" type="ball" />
+            <geom name="cube:middle" size="0.0285 0.0285 0.0285" type="box" condim="4" rgba="1 1 1 0" />
+            <site name="cube:center" pos="0 0 0" size="0.01" rgba="1 0 0 1" />
+            <body name="cube:face_top" pos="0 0 0.0285">
+                <inertial pos="0.000595079 0.00164079 -0.000370523" quat="0.500726 0.499393 -0.50038 0.4995" mass="0.000373826" diaginertia="6.62941e-08 3.94433e-08 2.69113e-08" />
+                <geom name="cube:face_top_bg" size="0.0285 0.0285 1e-05" type="box" material="cube:top_background" />
+                <geom name="cube:A" pos="0 0 -0.0009" quat="0.499998 0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:A" />
+            </body>
+            <body name="cube:face_bottom" pos="0 0 -0.0285">
+                <inertial pos="1.24617e-09 8.53097e-05 0.000863356" quat="0.499994 0.500006 -0.500006 0.499994" mass="0.000671887" diaginertia="1.31161e-07 1.03285e-07 2.82861e-08" />
+                <geom name="cube:face_bottom_bg" size="0.0285 0.0285 1e-05" type="box" contype="0" conaffinity="0" material="cube:bottom_background" />
+                <geom name="cube:I" pos="0 0 0.0009" quat="0.499998 0.5 -0.500002 0.5" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:I" />
+            </body>
+            <body name="cube:face_back" pos="0 0.0285 0">
+                <inertial pos="-1.11494e-07 -0.000867464 -6.0545e-09" quat="0.707107 0 0 0.707107" mass="0.000756733" diaginertia="1.32726e-07 7.57913e-08 5.73753e-08" />
+                <geom name="cube:face_back_bg" size="0.0285 1e-05 0.0285" type="box" contype="0" conaffinity="0" material="cube:back_background" />
+                <geom name="cube:O" pos="0 -0.0009 0" quat="0.707105 0 0 0.707108" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:O" />
+            </body>
+            <body name="cube:face_right" pos="0.0285 0 0">
+                <inertial pos="-0.000873209 1.17101e-09 -1.76614e-09" quat="0.473764 0.880652 0 0" mass="0.000918988" diaginertia="1.81249e-07 9.25108e-08 8.93128e-08" />
+                <geom name="cube:face_right_bg" size="1e-05 0.0285 0.0285" type="box" contype="0" conaffinity="0" material="cube:right_background" />
+                <geom name="cube:N" pos="-0.0009 0 0" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:N" />
+            </body>
+            <body name="cube:face_front" pos="0 -0.0285 0">
+                <inertial pos="-0.000137518 0.000867936 -6.974e-05" quat="0.707135 -5.65814e-05 -6.85566e-05 0.707078" mass="0.000767854" diaginertia="1.45799e-07 1.01854e-07 4.44071e-08" />
+                <geom name="cube:face_front_bg" size="0.0285 1e-05 0.0285" type="box" contype="0" conaffinity="0" material="cube:front_background" />
+                <geom name="cube:E" pos="0 0.0009 0" quat="0.707105 0 0 -0.707108" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:E" />
+            </body>
+            <body name="cube:face_left" pos="-0.0285 0 0">
+                <inertial pos="0.000864451 0.000520545 0.00344325" quat="0.962227 0.272246 0.00062095 -0.000519875" mass="0.000692549" diaginertia="1.13547e-07 7.21527e-08 4.18249e-08" />
+                <geom name="cube:face_left_bg" size="1e-05 0.0285 0.0285" type="box" contype="0" conaffinity="0" material="cube:left_background" />
+                <geom name="cube:P" pos="0.0009 0 0" quat="1.32679e-06 0 0 1" type="mesh" contype="0" conaffinity="0" material="cube:letter" mesh="cube:P" />
+            </body>
+        </body>
+        <body name="real_floor" pos="1 1 0.0005">
+            <inertial pos="0 0 0" mass="1" diaginertia="0.0833334 0.0833334 0.166667" />
+            <geom name="real_floor" size="0.5 0.5 0.0005" type="box" material="randomize25" />
+        </body>
+    </worldbody>
+    <contact>
+        <exclude body1="robot0:forearm" body2="robot0:wrist" />
+        <exclude body1="robot0:palm" body2="robot0:ffproximal" />
+        <exclude body1="robot0:palm" body2="robot0:mfproximal" />
+        <exclude body1="robot0:palm" body2="robot0:rfproximal" />
+        <exclude body1="robot0:palm" body2="robot0:thproximal" />
+        <exclude body1="robot0:lfmetacarpal" body2="robot0:lfproximal" />
+        <exclude body1="robot0:thproximal" body2="robot0:thmiddle" />
+    </contact>
+    <tendon>
+        <fixed name="robot0:FFT0" limited="true" range="0 1.6">
+            <joint joint="robot0:FFJ1" coef="1" />
+            <joint joint="robot0:FFJ0" coef="-1" />
+        </fixed>
+        <fixed name="robot0:FFT1" limited="true" range="0 3.14" damping="0.1">
+            <joint joint="robot0:FFJ1" coef="1" />
+            <joint joint="robot0:FFJ0" coef="1" />
+        </fixed>
+        <fixed name="robot0:MFT0" limited="true" range="0 1.6">
+            <joint joint="robot0:MFJ1" coef="1" />
+            <joint joint="robot0:MFJ0" coef="-1" />
+        </fixed>
+        <fixed name="robot0:MFT1" limited="true" range="0 3.14" damping="0.1">
+            <joint joint="robot0:MFJ1" coef="1" />
+            <joint joint="robot0:MFJ0" coef="1" />
+        </fixed>
+        <fixed name="robot0:RFT0" limited="true" range="0 1.6">
+            <joint joint="robot0:RFJ1" coef="1" />
+            <joint joint="robot0:RFJ0" coef="-1" />
+        </fixed>
+        <fixed name="robot0:RFT1" limited="true" range="0 3.14" damping="0.1">
+            <joint joint="robot0:RFJ1" coef="1" />
+            <joint joint="robot0:RFJ0" coef="1" />
+        </fixed>
+        <fixed name="robot0:LFT0" limited="true" range="0 1.6">
+            <joint joint="robot0:LFJ1" coef="1" />
+            <joint joint="robot0:LFJ0" coef="-1" />
+        </fixed>
+        <fixed name="robot0:LFT1" limited="true" range="0 3.14" damping="0.1">
+            <joint joint="robot0:LFJ1" coef="1" />
+            <joint joint="robot0:LFJ0" coef="1" />
+        </fixed>
+    </tendon>
+    <actuator>
+        <general name="robot0:A_WRJ1" class="robot0:asset_class" joint="robot0:WRJ1" ctrlrange="-0.47 0.117" forcerange="-0.2 0.2" biastype="affine" gainprm="2 0 0" biasprm="0 -2 0" user="2038 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_WRJ0" class="robot0:asset_class" joint="robot0:WRJ0" ctrlrange="-0.698 0.05" forcerange="-2 2" biastype="affine" gainprm="12 0 0" biasprm="0 -12 0" user="2036 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_FFJ3" class="robot0:asset_class" joint="robot0:FFJ3" ctrlrange="-0.277 0.33" forcerange="-0.1 0.1" biastype="affine" gainprm="0.13 0 0" biasprm="0 -0.13 0" user="2004 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_FFJ2" class="robot0:asset_class" joint="robot0:FFJ2" ctrlrange="0 1.454" forcerange="-0.3 0.3" biastype="affine" gainprm="0.4 0 0" biasprm="0 -0.4 0" user="2002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_FFJ1" class="robot0:asset_class" tendon="robot0:FFT1" ctrlrange="0 3.14" forcerange="-0.3 0.3" biastype="affine" gainprm="0.3 0 0" biasprm="0 -0.3 0" />
+        <general name="robot0:A_MFJ3" class="robot0:asset_class" joint="robot0:MFJ3" ctrlrange="-0.293 0.33" forcerange="-0.1 0.1" biastype="affine" gainprm="0.25 0 0" biasprm="0 -0.25 0" user="2010 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_MFJ2" class="robot0:asset_class" joint="robot0:MFJ2" ctrlrange="0 1.435" forcerange="-0.3 0.3" biastype="affine" gainprm="11 0 0" biasprm="0 -11 0" user="2008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_MFJ1" class="robot0:asset_class" tendon="robot0:MFT1" ctrlrange="0 3.14" forcerange="-0.3 0.3" biastype="affine" gainprm="0.3 0 0" biasprm="0 -0.3 0" />
+        <general name="robot0:A_RFJ3" class="robot0:asset_class" joint="robot0:RFJ3" ctrlrange="-0.3 0.343" forcerange="-0.05 0.05" biastype="affine" gainprm="1.5 0 0" biasprm="0 -1.5 0" user="2016 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_RFJ2" class="robot0:asset_class" joint="robot0:RFJ2" ctrlrange="0 1.51" forcerange="-0.3 0.3" biastype="affine" gainprm="2 0 0" biasprm="0 -2 0" user="2014 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_RFJ1" class="robot0:asset_class" tendon="robot0:RFT1" ctrlrange="0 3.14" forcerange="-0.3 0.3" biastype="affine" gainprm="0.18 0 0" biasprm="0 -0.18 0" />
+        <general name="robot0:A_LFJ4" class="robot0:asset_class" joint="robot0:LFJ4" ctrlrange="0.03 0.775" forcerange="-0.2 0.2" biastype="affine" gainprm="4 0 0" biasprm="0 -4 0" user="2024 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_LFJ3" class="robot0:asset_class" joint="robot0:LFJ3" ctrlrange="-0.332 0.247" forcerange="-0.1 0.1" biastype="affine" gainprm="2 0 0" biasprm="0 -2 0" user="2022 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_LFJ2" class="robot0:asset_class" joint="robot0:LFJ2" ctrlrange="0 1.545" forcerange="-0.3 0.3" biastype="affine" gainprm="0.8 0 0" biasprm="0 -0.8 0" user="2020 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_LFJ1" class="robot0:asset_class" tendon="robot0:LFT1" ctrlrange="0 3.14" forcerange="-0.3 0.3" biastype="affine" gainprm="0.4 0 0" biasprm="0 -0.4 0" />
+        <general name="robot0:A_THJ4" class="robot0:asset_class" joint="robot0:THJ4" ctrlrange="-1 0.5" forcerange="-0.2 0.2" biastype="affine" gainprm="1.5 0 0" biasprm="0 -1.5 0" user="2034 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_THJ3" class="robot0:asset_class" joint="robot0:THJ3" ctrlrange="0 1.21" forcerange="-0.15 0.15" biastype="affine" gainprm="1.5 0 0" biasprm="0 -1.5 0" user="2032 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_THJ2" class="robot0:asset_class" joint="robot0:THJ2" ctrlrange="-0.179 0.155" forcerange="-0.15 0.15" biastype="affine" gainprm="0.3 0 0" biasprm="0 -0.3 0" user="2030 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_THJ1" class="robot0:asset_class" joint="robot0:THJ1" ctrlrange="-0.583 0.524" forcerange="-0.18 0.18" biastype="affine" gainprm="2 0 0" biasprm="0 -2 0" user="2028 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+        <general name="robot0:A_THJ0" class="robot0:asset_class" joint="robot0:THJ0" ctrlrange="-1.571 0" forcerange="-0.2 0.2" biastype="affine" gainprm="2 0 0" biasprm="0 -2 0" user="2026 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+    </actuator>
+    <sensor>
+        <touch site="robot0:Tch_fftip" name="robot0:ST_Tch_fftip" />
+        <touch site="robot0:Tch_mftip" name="robot0:ST_Tch_mftip" />
+        <touch site="robot0:Tch_rftip" name="robot0:ST_Tch_rftip" />
+        <touch site="robot0:Tch_lftip" name="robot0:ST_Tch_lftip" />
+        <touch site="robot0:Tch_thtip" name="robot0:ST_Tch_thtip" />
+    </sensor>
+</mujoco>
