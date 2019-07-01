@@ -2,7 +2,7 @@
 *~
 bin/**
 !bin/install-prebuilt.sh
-!bin/**.py
+!bin/*.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
