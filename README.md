@@ -1,6 +1,6 @@
 **Status:** Archive (code is provided as-is, no updates expected)
 
-# Orrb
+# ORRB
 OpenAI Remote Rendering Backend
 
 ![OpenAI Remote Rendering Backend](/docs/orrb.png?raw=true "Orrb")
