@@ -26,7 +26,11 @@ This project is released under the MIT License. Please review the [License file]
 
 # Installation
 
-Prepare a clean python environment & activate it:
+This code runs on Mac OS X and Linux with Python 3.6.5.  The Linux version requires a running X11 server with OpenGL support.
+
+First, install [`pyenv`](https://github.com/pyenv/pyenv#installation).
+
+Then prepare a clean python environment & activate it:
 
 ```
 pyenv virtualenv 3.6.5 orrb
@@ -141,7 +145,7 @@ python bin/demo_keras.py
 # Linux
 
 In order to run this on Linux, you need a X11 display. In order to run on different GPUs configure a screen per gpu (internally Orrb uses the `:ORRB_DISPLAY.GPU_NUM` notation to assign different GPUs to different render servers).
-Use the `ORRB\_DISPLAY` environment variable to specify which display to use (default is `:0`). We use the NVidia virtual frame buffers and None display device mode to run headless in datacenters.
+Use the `ORRB_DISPLAY` environment variable to specify which display to use (default is `:0`). We use the NVidia virtual frame buffers and None display device mode to run headless in datacenters, see [Remote Visualization on Tesla GPUs](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-product-literature/remote-viz-tesla-gpus.pdf) for more details.
 
 # Building the Unity binaries
 
