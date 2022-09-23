@@ -4,6 +4,6 @@ Click==7.0
 grpcio==1.15.0
 numpy==1.15.2
 mpi4py==3.0.0
-protobuf==3.6.1
+protobuf==3.18.3
 scipy==1.1.0
 six==1.11.0
